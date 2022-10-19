@@ -1,0 +1,21 @@
+{
+  "name": "music",
+  "version": "1.0.0",
+  "description": "Made with JABU API",
+  "scripts": {
+    "start": "ts-node index.ts",
+    "watch": "nodemon index.ts"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "jabuapi": "github:vgougeon/jabuapi",
+    "ts-node": "^10.9.1"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.14",
+    "@types/node": "^18.11.2",
+    "typescript": "^4.8.4"
+  }
+}
