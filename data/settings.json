@@ -1,0 +1,12 @@
+{
+	"appName": "MusicAPI",
+	"appMail": "test@test.com",
+	"appPassword": "$2b$10$E0cpjwS2W4OC7tt.y4HTXO2dMH.NQmVhpE2ECfTRfAfwGUpOJGJLq",
+	"database": {
+		"host": "localhost",
+		"port": 3306,
+		"user": "root",
+		"password": "azerty31",
+		"database": "db"
+	}
+}

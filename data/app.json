@@ -1,5 +1,110 @@
 {
-	"collections": {},
-	"relations": {},
+	"collections": {
+		"music": {
+			"fields": {
+				"id": {
+					"type": "ID"
+				},
+				"createdAt": {
+					"type": "CREATED_AT"
+				},
+				"name": {
+					"type": "STRING",
+					"nullable": false,
+					"unique": false
+				},
+				"audio": {
+					"type": "MEDIA",
+					"nullable": false,
+					"unique": false
+				}
+			}
+		},
+		"artist": {
+			"fields": {
+				"id": {
+					"type": "ID"
+				},
+				"createdAt": {
+					"type": "CREATED_AT"
+				},
+				"username": {
+					"type": "STRING",
+					"nullable": false,
+					"unique": false
+				},
+				"password": {
+					"type": "PASSWORD",
+					"nullable": false,
+					"unique": false
+				},
+				"ip": {
+					"type": "IP",
+					"nullable": false,
+					"unique": false
+				},
+				"bio": {
+					"type": "RICHTEXT",
+					"nullable": true,
+					"unique": false
+				},
+				"social": {
+					"type": "JSON",
+					"nullable": true,
+					"unique": false
+				}
+			},
+			"config": {
+				"auth": {
+					"identifier": "username",
+					"password": "password",
+					"email": "",
+					"resetPasswordToken": "",
+					"emailConfirmToken": "",
+					"role": ""
+				}
+			}
+		},
+		"album": {
+			"fields": {
+				"id": {
+					"type": "ID"
+				},
+				"createdAt": {
+					"type": "CREATED_AT"
+				}
+			}
+		},
+		"genre": {
+			"fields": {
+				"id": {
+					"type": "ID"
+				},
+				"createdAt": {
+					"type": "CREATED_AT"
+				}
+			}
+		}
+	},
+	"relations": {
+		"musicArtist": {
+			"type": "ASYMMETRIC",
+			"nullable": false,
+			"unique": false,
+			"fieldName": "artist",
+			"leftTable": "music",
+			"rightTable": "artist",
+			"rightReference": "id"
+		},
+		"musicAlbuml": {
+			"type": "ASYMMETRIC",
+			"nullable": false,
+			"unique": false,
+			"fieldName": "album",
+			"leftTable": "music",
+			"rightTable": "album",
+			"rightReference": "id"
+		}
+	},
 	"enums": {}
 }

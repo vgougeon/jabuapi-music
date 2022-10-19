@@ -1,0 +1,290 @@
+[
+	{
+		"id": "1666218446097_Sb5LAsOYHsWbFNTkn6d4",
+		"name": "CREATE_TABLE",
+		"args": [
+			"music"
+		]
+	},
+	{
+		"id": "1666218446100OD_42jp05IDwbMkFioi4l",
+		"name": "CREATE_FIELD",
+		"args": [
+			"music",
+			{
+				"name": "id",
+				"options": {
+					"type": "ID"
+				}
+			}
+		]
+	},
+	{
+		"id": "1666218446102Oi00UZNrJFZiSYIvE7fjM",
+		"name": "CREATE_FIELD",
+		"args": [
+			"music",
+			{
+				"name": "createdAt",
+				"options": {
+					"type": "CREATED_AT"
+				}
+			}
+		]
+	},
+	{
+		"id": "1666218448706gVP2wKoRXtNJuvC6FBvll",
+		"name": "CREATE_TABLE",
+		"args": [
+			"artist"
+		]
+	},
+	{
+		"id": "1666218448707ZcQVOgkUys0k6Vb9rKWNb",
+		"name": "CREATE_FIELD",
+		"args": [
+			"artist",
+			{
+				"name": "id",
+				"options": {
+					"type": "ID"
+				}
+			}
+		]
+	},
+	{
+		"id": "1666218448707Im2_uUDjJDBACETrqqqU-",
+		"name": "CREATE_FIELD",
+		"args": [
+			"artist",
+			{
+				"name": "createdAt",
+				"options": {
+					"type": "CREATED_AT"
+				}
+			}
+		]
+	},
+	{
+		"id": "1666218457407vQ0CA3uCyET5DZxVkuC46",
+		"name": "CREATE_TABLE",
+		"args": [
+			"album"
+		]
+	},
+	{
+		"id": "1666218457409ecWuK99t0yA7-z5FcppTF",
+		"name": "CREATE_FIELD",
+		"args": [
+			"album",
+			{
+				"name": "id",
+				"options": {
+					"type": "ID"
+				}
+			}
+		]
+	},
+	{
+		"id": "1666218457409IHS3W3TvlJUuaYgNpAprq",
+		"name": "CREATE_FIELD",
+		"args": [
+			"album",
+			{
+				"name": "createdAt",
+				"options": {
+					"type": "CREATED_AT"
+				}
+			}
+		]
+	},
+	{
+		"id": "1666218484211pnUsjy9EvT7rsp3TGw-jx",
+		"name": "CREATE_TABLE",
+		"args": [
+			"genre"
+		]
+	},
+	{
+		"id": "1666218484213cjpr7AQluGJK73ntsj78z",
+		"name": "CREATE_FIELD",
+		"args": [
+			"genre",
+			{
+				"name": "id",
+				"options": {
+					"type": "ID"
+				}
+			}
+		]
+	},
+	{
+		"id": "16662184842139OgGDtR3v6b0UsZEc1PJ5",
+		"name": "CREATE_FIELD",
+		"args": [
+			"genre",
+			{
+				"name": "createdAt",
+				"options": {
+					"type": "CREATED_AT"
+				}
+			}
+		]
+	},
+	{
+		"id": "1666218489597CKhVpQXNtJZqHLMqfuD2p",
+		"name": "CREATE_FIELD",
+		"args": [
+			"music",
+			{
+				"name": "name",
+				"options": {
+					"type": "STRING",
+					"nullable": false,
+					"unique": false
+				}
+			}
+		]
+	},
+	{
+		"id": "16662184946502--29Ap1sJKj_j8PV-hTx",
+		"name": "CREATE_FIELD",
+		"args": [
+			"music",
+			{
+				"name": "audio",
+				"options": {
+					"type": "MEDIA",
+					"nullable": false,
+					"unique": false
+				}
+			}
+		]
+	},
+	{
+		"id": "16662185263809exPIehFOKVl253LERn0l",
+		"name": "CREATE_RELATION",
+		"args": [
+			{
+				"name": "musicArtist",
+				"options": {
+					"type": "ASYMMETRIC",
+					"nullable": false,
+					"unique": false,
+					"fieldName": "artist",
+					"leftTable": "music",
+					"rightTable": "artist",
+					"rightReference": "id"
+				}
+			}
+		]
+	},
+	{
+		"id": "1666218547274W4_h7u7ysZ1nn-Wok2tXK",
+		"name": "CREATE_FIELD",
+		"args": [
+			"artist",
+			{
+				"name": "username",
+				"options": {
+					"type": "STRING",
+					"nullable": false,
+					"unique": false
+				}
+			}
+		]
+	},
+	{
+		"id": "16662185528480WDmWusjfpNr1rjABBLnX",
+		"name": "CREATE_FIELD",
+		"args": [
+			"artist",
+			{
+				"name": "password",
+				"options": {
+					"type": "PASSWORD",
+					"nullable": false,
+					"unique": false
+				}
+			}
+		]
+	},
+	{
+		"id": "1666218561301Qrw7xf-hRbl9MRWAvp0ju",
+		"name": "CREATE_FIELD",
+		"args": [
+			"artist",
+			{
+				"name": "ip",
+				"options": {
+					"type": "IP",
+					"nullable": false,
+					"unique": false
+				}
+			}
+		]
+	},
+	{
+		"id": "1666218565892_vo3LwaT9CPKZdBbI21-v",
+		"name": "CREATE_FIELD",
+		"args": [
+			"artist",
+			{
+				"name": "bio",
+				"options": {
+					"type": "RICHTEXT",
+					"nullable": false,
+					"unique": false
+				}
+			}
+		]
+	},
+	{
+		"id": "1666218569452tvXmB7vW7QgMiytV6HSXk",
+		"name": "CREATE_FIELD",
+		"args": [
+			"artist",
+			{
+				"name": "mail",
+				"options": {
+					"type": "EMAIL",
+					"nullable": false,
+					"unique": false
+				}
+			}
+		]
+	},
+	{
+		"id": "1666218598798cMG2iiaw9d_I-qW_0dmJU",
+		"name": "CREATE_RELATION",
+		"args": [
+			{
+				"name": "musicAlbuml",
+				"options": {
+					"type": "ASYMMETRIC",
+					"nullable": false,
+					"unique": false,
+					"fieldName": "album",
+					"leftTable": "music",
+					"rightTable": "album",
+					"rightReference": "id"
+				}
+			}
+		]
+	},
+	{
+		"id": "166621867815094W56BYAC5JIs6LQWntDO",
+		"name": "CREATE_FIELD",
+		"args": [
+			"artist",
+			{
+				"name": "social",
+				"options": {
+					"type": "JSON",
+					"nullable": false,
+					"unique": false
+				}
+			}
+		]
+	}
+]
